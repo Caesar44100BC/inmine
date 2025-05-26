@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="google" content="notranslate" />
+<title>MLT & IT - Julius</title>
+<style>
+  /* Your existing styles here... */
+
+  :root {
+      --primary-color: black;
+      --text-color: red;
+      --background-color: #4CAF50;
+      --card-bg: black;
+      --shadow: blue;
+  }
+
+  body {
+      font-family: Arial, sans-serif;
+      margin: 5px;
+      padding: 2.5px;
+      background-color: goldenrod;
+      color: green;
+  }
+
+  .container {
+      width: 85%;
+      padding: 10px;
+      margin: auto;
+      background: goldenrod;
+      text-align: center;
+  }
+
+  .profile-pic {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #fff;
+      box-shadow: 0 4px 8px rgba(224, 184, 5, 0.2);
+  }
+
+  header {
+      background: transparent;
+      color: rgb(3, 55, 3);
+      padding: 20px;
+      text-align: center;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgb(5, 185, 50);
+  }
+
+  section {
+      margin: 20px 0;
+      padding: 30px;
+      background: rgba(0, 0, 0, 0.7);
+      border-radius: 10px;
+      box-shadow: 0 5px 15px gold;
+      text-align: left;
+      color: green;
+  }
+
+  footer {
+      position: relative;
+      text-align: center;
+      margin: 40px 0;
+      font-size: 2.5em;
+      font-weight: bold;
+      color: #ff4500; /* base fire color */
+      user-select: none;
+      letter-spacing: 0.1em;
+      overflow: visible;
+      height: 80px;
+  }
+
+  /* Fire glow flicker animation */
+  @keyframes fireGlow {
+    0%, 100% {
+      text-shadow:
+        0 0 5px #ff4500,
+        0 0 10px #ff6347,
+        0 0 20px #ff4500,
+        0 0 40px #ff6347,
+        0 0 80px #ff4500;
+      color: #ff4500;
+    }
+    50% {
+      text-shadow:
+        0 0 10px #ff7f50,
+        0 0 20px #ff6347,
+        0 0 40px #ff4500,
+        0 0 80px #ff6347,
+        0 0 100px #ff4500;
+      color: #ff7f50;
+    }
+  }
+
+  footer h2 {
+    animation: fireGlow 3s ease-in-out infinite;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Rain container above text */
+  .rain {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 120px;
+    height: 80px;
+    pointer-events: none;
+    transform: translateX(-50%);
+    overflow: visible;
+    z-index: 2;
+  }
+
+  /* Single raindrop */
+  .raindrop {
+    position: absolute;
+    width: 2px;
+    height: 12px;
+    background: #00bfffcc;
+    border-radius: 50%;
+    opacity: 0.7;
+    animation-name: fall;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+
+  /* Raindrop animation */
+  @keyframes fall {
+    0% {
+      transform: translateY(0);
+      opacity: 0.7;
+    }
+    80% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(70px);
+      opacity: 0;
+    }
+  }
+
+  /* Multiple raindrops with staggered delay and positions */
+  .raindrop:nth-child(1) {
+    left: 10px;
+    animation-duration: 1.4s;
+    animation-delay: 0s;
+  }
+  .raindrop:nth-child(2) {
+    left: 30px;
+    animation-duration: 1.2s;
+    animation-delay: 0.3s;
+  }
+  .raindrop:nth-child(3) {
+    left: 50px;
+    animation-duration: 1.6s;
+    animation-delay: 0.5s;
+  }
+  .raindrop:nth-child(4) {
+    left: 70px;
+    animation-duration: 1.3s;
+    animation-delay: 0.7s;
+  }
+  .raindrop:nth-child(5) {
+    left: 90px;
+    animation-duration: 1.5s;
+    animation-delay: 1s;
+  }
+</style>
+</head>
+
+<body>
+
+  <!-- Your existing body content here -->
+
+  <header>
+    <img src="in.jpg" alt="Profile Picture" class="profile-pic" />
+    <div class="container">
+      <h1><strong>I'm Julius</strong></h1>
+      <p><strong>Medical Laboratory Technologist | HTML & CSS Coder</strong></p>
+    </div>
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      I am a Medical Laboratory Technologist specializing in human disease diagnosis, offering expert health guidance to enhance well-being and prevent illnesses. My expertise includes performing microbial cultures to isolate and identify pathogens. I also have strong IT proficiency, with advanced knowledge in Windows, MS Office, internet use, and email management.
+    </p>
+  </section>
+
+  <section id="education">
+    <h2>Professional Education</h2>
+    <p><strong>Medical Laboratory Science</strong><br />
+      Singida College of Health Science and Technology, Singida, Tanzania (2021–2024)<br />
+      Trained in disease diagnosis, laboratory testing, and health analysis.
+    </p>
+
+    <p><strong>Information Technology</strong><br />
+      St. Benedict Peramiho Abbey, Mbinga, Tanzania (2020)<br />
+      Specialized in computer applications, system management, and troubleshooting.
+    </p>
+  </section>
+
+  <section id="experience">
+    <h2>Professional Experience</h2>
+    <h3>Medical Laboratory Technologist</h3>
+    <ul>
+      <li>Mbeya Regional Referral Hospital (2023)</li>
+      <li>Bugando Medical Centre (2024)</li>
+    </ul>
+    <p>
+      Performed tests in microbiology, hematology, and biochemistry. Provided diagnostic support and collaborated with oncology departments.
+    </p>
+
+    <h3>Information Technologist</h3>
+    <ul>
+      <li>St. Benedict Vocational Training Centre (2021)</li>
+      <li><strong>Caesar Internet Cafe</strong> (2024–Present)</li>
+    </ul>
+    <p>Offered IT support, troubleshooting, and guidance on computer systems and internet use.</p>
+  </section>
+
+  <section id="projects">
+    <h2>Professional Projects</h2>
+    <p>
+      I have demonstrated excellence in my profession with:<br />
+      <ul>
+        <li>Movin Medical Laboratory</li>
+        <li>Sham'Police Medical Laboratory</li>
+      </ul>
+      Contributing to accurate diagnosis and public health through medical and IT support.
+    </p>
+    <p>
+      At Caesar Internet Cafe, I continue offering IT services, software troubleshooting, system support, and digital solutions to local businesses and
+      individuals.
+    </p>
+  </section>
+
+  <section id="impact">
+    <h2>Professional Impact</h2>
+    <p>
+      Since 2024, I've served as a medical expert in disease diagnosis and lab analysis. Since 2020, I’ve also provided IT solutions — streamlining systems and
+      optimizing workflows for better digital efficiency.
+    </p>
+  </section>
+
+  <section id="contact">
+    <h2>Let's talk!</h2>
+    <div class="talk-box" ondblclick="window.location.href='mailto:luogajulius@gmail.com'">
+      Double Click to Contact Me
+    </div>
+  </section>
+
+  <footer>
+    <h2>© 2025</h2>
+    <div class="rain">
+      <div class="raindrop"></div>
+      <div class="raindrop"></div>
+      <div class="raindrop"></div>
+      <div class="raindrop"></div>
+      <div class="raindrop"></div>
+    </div>
+  </footer>
+</body>
+</html>
